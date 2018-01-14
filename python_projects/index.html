@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" type="image/png" href="me.png">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<style type="text/css">
+  		#my-h1 {font-family:franklin gothic; text-align:center; background-color:rgb(213,238,213); padding:20px; 
+			margin-top:0; margin-left:-8px; margin-right:0; margin-bottom:0; text-transform:uppercase;}
+		#home {color:white; margin-left:-60px; font-size:20px; margin-right:60px;}
+		nav.my-navbar {padding:25px; background-color:black;}
+		.my-navbar ul {list-style-type:none; background-color:black; margin-top:-8px; margin-left:-8px; margin-right:-8px;}
+		.my-navbar li {display:inline-block;}
+		.my-navbar li a {text-decoration:none; font-family:arial black; color:white; padding:30px;}
+		.my-navbar li a:hover {text-decoration:underline;}
+		.rect {background-color:yellowgreen; margin-top:-16px; margin-left:-8px; margin-right:0;}
+  	</style>
+	<title>Python Projects</title>
+</head>
+<body>
+	<nav class="my-navbar">
+		<ul>
+			<li><a href="#"><span class="glyphicon glyphicon-home" id="home"></span></a></li>
+			<li><a href="http://maxerenberg.me/about_me">About me</a></li>
+			<li><a href="http://maxerenberg.me/Max_Erenberg_Resume.pdf" target="_blank">Résumé</a></li>
+			<li><a href="http://maxerenberg.me/python_projects">Python projects</a></li>
+		</ul>
+	</nav>
+	<div class="rect">&nbsp</div>
+	<h1 id="my-h1">Python Projects</h1>
+	<div class="project-nav">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="#tabhome" data-toggle="tab">Home</a></li>
+			<li><a href="#weatherservice" data-toggle="tab">Weather Service</a></li>
+			<li><a href="#unsubscriber" data-toggle="tab">Auto Unsubscriber</a></li>
+			<li><a href="#sushigoround" data-toggle="tab">Sushi Go Round</a></li>
+			<li><a href="#quizgenerator" data-toggle="tab">Quiz Generator</a></li>
+		</ul>
+		<ul class="tab-content">
+			<div id="tabhome" class="tab-pane fade in active">
+				<h3>Home</h3>
+				<p>This is a showcase of some of my projects in Python inspired by Al Sweigart's <i>Automate The Boring Stuff With Python</i> (which you can read online for free <a href="https://automatetheboringstuff.com">here</a>). The code is displayed here through <a href="https://trinket.io">Trinket</a>, a browser-embedded code editor. Unfortunately, it is not possible to import third-party modules in Trinket with only a free trial account so <b>the projects' code will not actually work</b> if you try to run it in this browser. However, you are more than welcome to copy and paste the code into your own editor and download the modules yourself.</p>
+				<p>A demo of Trinket is shown below. Feel free to try it out!</p>
+				<iframe src="https://trinket.io/embed/python/65b153f215" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+			</div>
+			<div id="weatherservice" class="tab-pane fade">
+				<h3>Weather Service</h3>
+				<p>This program gathers JSON weather data from <a href="http://openweathermap.org/api">OpenWeatherMap</a> and sends it via text message.</p>
+				<p>Note that to run this code yourself, you need to have a registered account with <a href="http://openweathermap.org/api">OpenWeatherMap</a> and <a href="https://www.twilio.com/try-twilio">Twilio</a>.</p>
+				<p><i>Reminder: To see this code in action, you will need to run it in your own IDE and have the required modules installed.</i></p>
+				<iframe src="https://trinket.io/embed/python/6fca6adeeb" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+			</div>
+			<div id="unsubscriber" class="tab-pane fade">
+				<h3>Auto Unsubscriber</h3>
+				<p>This program goes through every email in your inbox within a given time frame and opens every "unsubscribe" link that is found (which could be useful for eliminating large amounts of spam at once). Since my email account is with Outlook, I am using the IMAP server for Outlook; other email providers will have different servers (some other common ones are: Gmail: imap.gmail.com; Office365: outlook.office365.com; Yahoo: imap.yahoo.mail.com). Note that if you are using Gmail, you will need to change your security settings to allow apps to access IMAP.</p>
+				<p>On a side note, if you decide to install IMAPClient and you are using Windows, you may wish to consider installing the older version (use pip install imapclient==0.13 in the Command Line) since there have been SSL issues in the new version (unless you know how to configure your SSL settings, which I don't).</p>
+				<iframe src="https://trinket.io/embed/python/001d83d0be" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+			</div>
+			<div id="sushigoround" class="tab-pane fade">
+				<h3>Sushi Go Round</h3>
+				<p>Sushi Go Round is an online game available on Miniclip which involves satisfying customers' orders quickly by clicking on the approriate ingredients and ordering new ones when necessary. You can try out the first couple of levels <a href="http://www.freearcade.com/SushiGoRound.flash/SushiGoRound.html">here</a>. This program uses the PyAutoGUI module, which allows GUI automation, to play the game automatically. Essentially, whenever a new image of sushi appears in the speech bubble area, the program will identify the image, check if enough ingredients are available, and, if so, click on the appropriate ones (if not, it will order more). In the meantime, it will pick up plates.</p>
+				<p>For best results, use Chrome and make sure it is full-screen (since these settings were used to write the program and it is pixel-specific).</p>
+				<p>You will also need to download these image files and make sure they are in the same directory as your program: <a href="images.zip">download</a></p>
+				<p>The challenging part was keeping track of which customers had been served and which customers hadn't, because we don't want to keep on making orders until a customer's speech bubble disappears (although the frequency at which customers appear makes this strategy more effective than one might expect). As a safety measure, in this program, a customer's order will be re-made if they have been waiting for longer than 10 cycles (in one cycle, all types of sushi will be checked amongst the orders). The worst case is when a customer appears suddenly at the leftmost side and takes an order that was made for someone else.</p>
+				<p>The program isn't perfect, of course. The next direction for this project will probably be to track each order and ensure that it reached its recipient.</p>
+				<iframe src="https://trinket.io/embed/python/04b4be8f92" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+				<div>
+					<h3>Video Demo</h3>
+					<p>Below is a video demo of the program running in Chrome.</p>
+					<div class="container">
+						<video controls><source src="SushiGoRound.mp4" type="video/mp4"></video>
+					</div>
+				</div>
+			</div>
+			<div id="quizgenerator" class="tab-pane fade">
+				<h3>Quiz Generator</h3>
+				<p>This program generates 30 multiple choice quizzes with the questions and answers in random order (which would be very tedious to do manually). I'm taking a class in genetics at the moment, so that's what in the example, but the question:answer pairs can be edited however you like.</p>
+				<p>Note that the random module is built-in to Python already.</p>
+				<iframe src="https://trinket.io/embed/python/f7e62bb489" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+			</div>
+		</ul>
+	</div>
+</body>
+</html>
