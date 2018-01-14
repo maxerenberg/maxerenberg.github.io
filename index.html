@@ -1,11 +1,91 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Max Erenberg's personal website</title>
-	<meta charset="utf-8">
+	<link rel="icon" type="image/png" href="me.png">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<script src="http://www.schillmania.com/projects/snowstorm/snowstorm.js"></script>
+  	<script>snowStorm.followMouse = false;</script>
+	<style type="text/css">
+		#my-h1 {font-family:franklin gothic; text-align:center; background-color:rgb(213,238,213); padding:20px; 
+			margin-top:0; margin-left:-8px; margin-right:0; margin-bottom:0; text-transform:uppercase;}
+		#home {color:white; margin-left:-60px; font-size:20px; margin-right:60px;}
+		nav.my-navbar {padding:25px; background-color:black;}
+		.my-navbar ul {list-style-type:none; background-color:black; margin-top:-8px; margin-left:-8px; margin-right:-8px;}
+		.my-navbar li {display:inline-block;}
+		.my-navbar li a {text-decoration:none; font-family:arial black; color:white; padding:30px;}
+		.my-navbar li a:hover {text-decoration:underline;}
+		.rect {background-color:yellowgreen; margin-top:-16px; margin-left:-8px; margin-right:0;}
+		.my-main {position:relative; left:530px; max-width: 600px;}
+		.my-main h1 {font-family:arial narrow;}
+		.carousel-inner {max-width:960px; max-height:400px; margin:auto;}
+		.projects {max-width:330px; position:relative; left:180px; bottom:160px;}
+		.projects h4 {margin-bottom:12px;}
+		.projects button {display:block; margin-bottom:10px; margin-top:10px; font-size:16px;}
+		footer {font-size:11px; margin-left:20px; color:grey; margin-top:-100px;}
+	</style>
+	<title>Max Erenberg</title>
 </head>
 <body>
-<h1>Welcome to my corner of the web!</h1>
-<h3>My site</h3>
+	<nav class="my-navbar">
+		<ul>
+			<li><a href="#"><span class="glyphicon glyphicon-home" id="home"></span></a></li>
+			<li><a href="http://maxerenberg.me/about_me">About me</a></li>
+			<li><a href="http://maxerenberg.me/Max_Erenberg_Resume.pdf" target="_blank">Résumé</a></li>
+			<li><a href="http://maxerenberg.me/python_projects">Python projects</a></li>
+		</ul>
+	</nav>
+	<div class="rect">&nbsp</div>
+	<h1 id="my-h1">Max Erenberg</h1>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="pic1.jpg" alt="CS">
+      <div class="carousel-caption">
+      	<h3>This is my first caption.</h3>
+      	<p>This is my first subcaption.</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="pic2.jpg" alt="CS">
+      <div class="carousel-caption">
+      	<h3>This is my second caption.</h3>
+      	<p>This is my second subcaption.</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="pic3.jpg" alt="CS">
+      <div class="carousel-caption">
+      	<h3>This is my third caption.</h3>
+      	<p>This is my third subcaption.</p>
+      </div>
+    </div>
+  </div>  
+</div>
+<div class="my-main">
+	<h1><b>Welcome to my corner of the web!</b></h1>
+	<p>I'm a first year undergraduate student studying Computer Science at the University of Waterloo.</p>
+	<p>Feel free to explore my website, which I have mainly dedicated to showing my Python projects.</p>
+	<p>If you'd like to contact me, I can be reached by email at <a href="mailto:max.erenberg@outlook.com">max.erenberg@outlook.com.</a></p>
+	<p>Happy coding!</p>
+</div>
+<div class="projects">
+	<h4>Some of my latest projects</h4>
+	<button class="btn" data-toggle="collapse" data-target="#project1">Weather Service</button>
+	<div id="project1" class="collapse">Sends a text message every morning about the day's weather using the OpenWeatherMap and Twilio APIs. Find out more <a href="#">here</a>.</div>
+	<button class="btn" data-toggle="collapse" data-target="#project2">Auto Unsubscriber</button>
+	<div id="project2" class="collapse">Opens every 'unsubscribe' link in every email since a given date using the IMAPClient module. Find out more <a href="#">here</a>.</div>
+	<button class="btn" data-toggle="collapse" data-target="#project3">Sushi Go Round</button>
+	<div id="project3" class="collapse">Plays the 'Sushi Go Round' game online using GUI automation. Find out more <a href="#">here</a>.</div>
+</div>
+<footer>Snowstorm effect adapted from http://www.schillmania.com/projects/snowstorm/snowstorm.js.</footer>
 </body>
 </html>
