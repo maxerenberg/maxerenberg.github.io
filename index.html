@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Max Erenberg</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="me.png">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+    .zoom-container {overflow: hidden; position: relative; }
+    .zoom-image {transition-property: transform, opacity; transition-duration: .4s; width:100%;}
+    .zoom-text {position:absolute; left:50%; top:50%; transform: translate(-50%, -50%); font-weight:bold; display:none;}
+    .zoom-container:hover .zoom-image {transform: scale(1.2); opacity: 0.4;}
+    .zoom-container:hover .zoom-text {display:block;}
+    .bar-blue {height:20px; background-color:#3f51b5;}
+    .w3-table tr {border-bottom:1px solid black;}
+    .w3-table tr:last-child {border-bottom:none;}
+  </style>
+</head>
+<body class="w3-content" style="max-width:1300px">
+
+<!-- First Grid: Logo & About -->
+<div class="w3-row">
+  <div class="w3-half w3-black w3-container w3-center" style="height:700px">
+    <div class="w3-padding-64">
+      <h1>Max Erenberg</h1>
+    </div>
+    <div class="w3-padding-64">
+      <a href="#" class="w3-button w3-black w3-block w3-hover-blue-grey w3-padding-16">Home</a>
+      <a href="#work" class="w3-button w3-black w3-block w3-hover-teal w3-padding-16">My Work</a>
+      <a href="#work" class="w3-button w3-black w3-block w3-hover-dark-grey w3-padding-16">Resume</a>
+      <a href="#contact" class="w3-button w3-black w3-block w3-hover-brown w3-padding-16">Contact</a>
+    </div>
+  </div>
+  <div class="w3-half w3-blue-grey w3-container" style="height:700px">
+    <div class="w3-padding-64 w3-center">
+      <h1>About Me</h1>
+      <img src="profile_pic.jpg" class="w3-margin w3-circle" alt="Person" style="width:50%">
+      <div class="w3-left-align w3-padding-large">
+        <p>I'm a second year undergrad studying Computer Science at the University of Waterloo.
+          My main stack is Python, JavaScript, PHP and C.</p>
+        <p>Please feel free to explore my website or shoot me an email!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Second Grid: Work & Resume -->
+<div class="w3-row">
+  <div class="w3-half w3-light-grey w3-center" style="min-height:800px" id="work">
+    <div class="w3-padding-64">
+      <h2>My Work</h2>
+      <p>Some of my latest projects.</p>
+    </div>
+    <div class="w3-row">
+      <div class="w3-half zoom-container">
+        <a href="https://github.com/maxerenberg/nonogram-solver" target="_blank">
+          <img src="nonogram.png" class="zoom-image">
+          <div class="zoom-text">A nonogram solver built in Python.</div>
+        </a>
+      </div>
+      <div class="w3-half zoom-container">
+        <a href="https://github.com/maxerenberg/2016-FEC-data" target="_blank">
+          <img src="jupyter.png" class="zoom-image">
+          <div class="zoom-text">A look at FEC campaign finance data.</div>
+        </a>
+      </div>
+    </div>
+    <div class="w3-row w3-hide-small">
+      <div class="w3-half zoom-container">
+        <a href="https://github.com/maxerenberg/merenber-chess" target="_blank">
+          <img src="chessboard.png" class="zoom-image">
+          <div class="zoom-text">A multiplayer chess game built in PHP.</div>
+        </a>
+      </div>
+      <div class="w3-half zoom-container">
+        <a href="https://github.com/maxerenberg/Crowdmark-uploader" target="_blank">
+          <img src="crowdmark.png" class="zoom-image">
+          <div class="zoom-text">An automated PDF uploader to Crowdmark.</div>
+        </a>
+      </div>
+    </div>
+    <br>
+    <div>
+      <img src="github.svg" width="30px">&nbsp&nbsp
+      <a href="https://github.com/maxerenberg">https://github.com/maxerenberg</a>
+    </div>
+  </div>
+  <div class="w3-half w3-indigo w3-container" style="min-height:800px">
+    <div class="w3-padding-64 w3-center">
+      <h2>Resume</h2>
+      <p><a href="Max_Erenberg_Resume.pdf" target="_blank">Click here to view</a></p>
+      <br>
+      <p>A brief overview of my skills</p>
+      <div class="w3-container w3-responsive">
+        <table class="w3-table">
+          <tr>
+            <th>Language</th>
+            <th>Profiency (relative)</th>
+            <th>Libraries/Frameworks Used</th>
+          </tr>
+          <tr class="w3-white">
+            <td>Python</td>
+            <td><div class="bar-blue" style="width:200px"></div></td>
+            <td>pandas, numpy, matplotlib, selenium</td>
+          </tr>
+          <tr class="w3-white">
+            <td>C</td>
+            <td><div class="bar-blue" style="width:150px"></td>
+            <td></td>
+          </tr>
+          <tr class="w3-white">
+            <td>SQL</td>
+            <td><div class="bar-blue" style="width:140px"></td>
+            <td>SQL Server, DB2, MySQL, Postgres</td>
+          </tr>
+          <tr class="w3-white">
+            <td>JavaScript</td>
+            <td><div class="bar-blue" style="width:130px"></td>
+            <td>D3.js</td>
+          </tr>
+          <tr class="w3-white">
+            <td>PHP</td>
+            <td><div class="bar-blue" style="width:130px"></td>
+            <td></td>
+          </tr>
+          <tr class="w3-white">
+            <td>HTML/CSS</td>
+            <td><div class="bar-blue" style="width:120px"></td>
+            <td>Bootstrap</td>
+          </tr>
+          <tr class="w3-white">
+            <td>Bash scripting</td>
+            <td><div class="bar-blue" style="width:110px"></td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Third Grid: Swing By & Contact -->
+<div class="w3-row" id="contact">
+  <div class="w3-half w3-dark-grey w3-container w3-center" style="height:700px">
+    <div class="w3-padding-64">
+      <h1>Contact</h1>
+    </div>
+    <div class="w3-padding-64">
+      <p><a href="mailto:merenber@edu.uwaterloo.ca">Email</a></p>
+      <p><a href="https://www.linkedin.com/in/max-erenberg">LinkedIn</a></p>
+      <p><a href="https://github.com/maxerenberg">GitHub</a></p>
+    </div>
+  </div>
+  <div class="w3-half w3-teal w3-container" style="height:700px">
+    <div class="w3-padding-64 w3-padding-large">
+      <h1>Empty space</h1>
+      <p class="w3-opacity">This is some empty space I haven't figured out how to fill yet :)</p>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-black w3-padding-16">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+</body>
+</html>
