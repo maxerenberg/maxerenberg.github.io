@@ -1,0 +1,213 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: #333;
+}
+
+main {
+  margin-top: 80px;
+}
+
+#side-nav-menu {
+  cursor: pointer;
+  font-size: 2em;
+  color: #ddd;
+  display: inline-block;
+  padding: 12px;
+}
+
+#menu-list {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 1;
+  width: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  background-color: #111;
+}
+
+#menu-list ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 10px;
+}
+
+#menu-list li {
+  padding: 8px 0;
+}
+
+#menu-list a {
+  text-decoration: none;
+  color: #f1f1f1;
+}
+
+#menu-list a:hover {
+  color: #f1f1f1;
+}
+
+#menu-list #close-menu {
+  font-size: 2em;
+  text-align: right;
+  padding-right: 12px;
+  cursor: pointer;
+}
+
+main {
+  margin-top: 12px;
+}
+
+.typewriter {
+  border-right: 2px solid;
+  animation: blinkTextCursor 300ms steps(2) infinite alternate;
+}
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(0, 0, 0, 0.75);
+  }
+  to {
+    border-right-color: rgba(0, 0, 0, 0);
+  }
+}
+
+section {
+  padding: 20px 0;
+}
+
+section div>img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#greeting {
+  display: flex;
+  margin: 20px;
+}
+
+#greeting>div {
+  flex: 1 1 10vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#greeting>div:first-child {
+  flex: 1 1 20vw;
+}
+
+#about-me {
+  display: flex;
+  background-color: #d9d4d0;
+}
+
+#about-me>div {
+  flex: 1 1 0;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#projects h2, #projects article {
+  text-align: center;
+}
+
+.projects-gallery {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.projects-gallery article {
+  flex: 1 200px;
+  margin: 8px;
+  padding: 16px;
+  border-radius: 6px;
+  box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+.projects-gallery article img {
+  max-height: 150px;
+}
+
+#contact {
+  padding: 20px;
+  background-color: #c4f5fb;
+}
+
+#contact>h2,
+#contact>p {
+  text-align: center;
+}
+
+.contact-list {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-list>a {
+  display: block;
+  text-decoration: none;
+  margin: 20px;
+}
+
+.contact-list img {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.contact-list div {
+  text-align: center;
+}
+
+footer {
+  padding: 10px 60px 0 20px;
+  background-color: #333;
+  color: #ddd;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 600px) {
+  #menu-list a {
+    color: #818181;
+  }
+  #greeting {
+    padding: 60px 10vw;
+    font-size: 2em;
+  }
+  #about-me {
+    font-size: 1.6em;
+  }
+  #side-nav-menu {
+    display: none;
+  }
+  #menu-list {
+    position: static;
+    width: auto;
+  }
+  #menu-list ul {
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  #menu-list li {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  #close-menu {
+    display: none;
+  }
+}

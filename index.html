@@ -1,170 +1,173 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Max Erenberg</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="me.png">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <style>
-    .zoom-container {overflow: hidden; position: relative; }
-    .zoom-image {transition-property: transform, opacity; transition-duration: .4s; width:100%;}
-    .zoom-text {position:absolute; left:50%; top:50%; transform: translate(-50%, -50%); font-weight:bold; display:none;}
-    .zoom-container:hover .zoom-image {transform: scale(1.2); opacity: 0.4;}
-    .zoom-container:hover .zoom-text {display:block;}
-    .bar-blue {height:20px; background-color:#3f51b5;}
-    .w3-table tr {border-bottom:1px solid black;}
-    .w3-table tr:last-child {border-bottom:none;}
-  </style>
+  <link rel="stylesheet" href="main.css">
 </head>
-<body class="w3-content" style="max-width:1300px">
 
-<!-- First Grid: Logo & About -->
-<div class="w3-row">
-  <div class="w3-half w3-black w3-container w3-center" style="height:700px">
-    <div class="w3-padding-64">
-      <h1>Max Erenberg</h1>
-    </div>
-    <div class="w3-padding-64">
-      <a href="#" class="w3-button w3-black w3-block w3-hover-blue-grey w3-padding-16">Home</a>
-      <a href="#work" class="w3-button w3-black w3-block w3-hover-teal w3-padding-16">My Work</a>
-      <a href="#work" class="w3-button w3-black w3-block w3-hover-dark-grey w3-padding-16">Resume</a>
-      <a href="#contact" class="w3-button w3-black w3-block w3-hover-brown w3-padding-16">Contact</a>
-    </div>
-  </div>
-  <div class="w3-half w3-blue-grey w3-container" style="height:700px">
-    <div class="w3-padding-64 w3-center">
-      <h1>About Me</h1>
-      <img src="profile_pic.jpg" class="w3-margin w3-circle" alt="Person" style="width:50%">
-      <div class="w3-left-align w3-padding-large">
-        <p>I'm a third year undergrad studying Computer Science at the University of Waterloo.
-          My main stack is Python, Nodejs and C++.</p>
-        <p>Please feel free to explore my website or shoot me an email!</p>
+<body>
+  <header>
+    <nav>
+      <div id="side-nav-menu" onclick="openNav()">&#9776;</div>
+      <div id="menu-list">
+        <ul>
+          <li id="close-menu"><a onclick="closeNav()">&times;</a></li>
+          <li><a href="#greeting">Home</a></li>
+          <li><a href=#about-me>About me</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="Max_Erenberg_Resume.pdf" target="_blank">Resume</a></li>
+        </ul>
       </div>
-    </div>
-  </div>
-</div>
-
-<!-- Second Grid: Work & Resume -->
-<div class="w3-row">
-  <div class="w3-half w3-light-grey w3-center" style="min-height:800px" id="work">
-    <div class="w3-padding-64">
-      <h2>My Work</h2>
-      <p>Some of my latest projects.</p>
-      <img src="github.svg" width="30px">&nbsp&nbsp
-      <a href="https://github.com/maxerenberg">https://github.com/maxerenberg</a>
-    </div>
-    <div class="w3-row">
-      <div class="w3-half zoom-container">
-        <a href="https://github.com/maxerenberg/ocr-reader-ui" target="_blank">
-          <img src="ocr-reader.png" class="zoom-image">
-          <div class="zoom-text">A web UI for optical character recognition.</div>
+    </nav>
+  </header>
+  <main>
+    <section id="greeting">
+      <div id="greeting-text">
+        <p>Hi, I'm</p>
+        <h1>Max Erenberg</h1>
+        <p>I'm a&nbsp;<span class="typewriter"
+            data-typewriter='["software developer", "Linux enthusiast", "web developer", "programmer"]'></span>
+        </p>
+      </div>
+      <div>
+        <img src="undraw_startup_life_2du2.svg">
+      </div>
+    </section>
+    <section id="about-me">
+      <div>
+        <img src="undraw_feeling_proud_qne1.svg">
+      </div>
+      <div id="about-me-text">
+        <h2>About me</h2>
+        <p>I'm a 3rd year CS undergrad student at the University of Waterloo.</p>
+        <p>I'm passionate about web design, cloud computing, DevOps, Linux and microservice architecture.</p>
+      </div>
+    </section>
+    <section id="projects">
+      <h2>Recent projects</h2>
+      <div class="projects-gallery">
+        <article>
+          <div>
+            <img src="ocr.png">
+          </div>
+          <h3><a href="https://github.com/maxerenberg/ocr-reader-ui">ocr-reader-ui</a></h3>
+          <p>
+            A web UI for optical character recognition.
+            Uses the open source Tesseract library to detect lines and words,
+            and creates clickable elements with definitions provided.
+          </p>
+          <p>Technologies used: Python (Flask), SQL, HTML, CSS, Javascript</p>
+        </article>
+        <article>
+          <div>
+            <img src="jupyter.png">
+          </div>
+          <h3><a href="https://github.com/maxerenberg/2016-FEC-data">2016-FEC-data</a></h3>
+          <p>
+            A deep dive into 2016 campaign finance data in the U.S.
+          </p>
+          <p>Technologies used: Python (pandas, matplotlib)</p>
+        </article>
+        <article>
+          <div>
+            <img src="undraw_Yacht_8g6r.svg">
+          </div>
+          <h3><a href="https://github.com/maxerenberg/kaggle-titanic">kaggle-titanic</a></h3>
+          <p>
+            Uses machine learning to predict survival rates on the Titanic.
+          </p>
+          <p>Technologies used: Python (pandas, scikit-learn)</p>
+        </article>
+        <article>
+          <div>
+            <img src="github.svg">
+          </div>
+          <h3><a href="https://github.com/maxerenberg">View more</a></h3>
+          <p>
+            See all of my projects on GitHub!
+          </p>
+        </article>
+      </div>
+    </section>
+    <section id="contact">
+      <h2>Contact me</h2>
+      <p>Email: merenber@uwaterloo.ca</p>
+      <div class="contact-list">
+        <a href="https://www.linkedin.com/in/max-erenberg">
+          <div><img src="linkedin.png"></div>
+          <div>LinkedIn</div>
+        </a>
+        <a href="https://github.com/maxerenberg">
+          <div><img src="github.svg"></div>
+          <div>GitHub</div>
+        </a>
+        <a href="Max_Erenberg_Resume.pdf">
+          <div><img src="resume.png"></div>
+          <div>Resume</div>
         </a>
       </div>
-      <div class="w3-half zoom-container">
-        <a href="https://github.com/maxerenberg/wpa2-psk-handshake" target="_blank">
-          <img src="4-way-handshake.png" class="zoom-image">
-          <div class="zoom-text">A live demonstration of the WPA2 PSK handshake.</div>
-        </a>
-      </div>
-    </div>
-    <div class="w3-row">
-      <div class="w3-half zoom-container">
-        <a href="https://github.com/maxerenberg/2016-FEC-data" target="_blank">
-          <img src="jupyter.png" class="zoom-image">
-          <div class="zoom-text">A look at FEC campaign finance data.</div>
-        </a>
-      </div>
-      <div class="w3-half zoom-container">
-        <a href="https://github.com/maxerenberg/kaggle-titanic" target="_blank">
-          <img src="titanic.png" class="zoom-image">
-          <div class="zoom-text">An attempt at predicting survival rates on the Titanic.</div>
-        </a>
-      </div>
-    </div>
-  </div>
-  <div class="w3-half w3-indigo w3-container" style="min-height:800px">
-    <div class="w3-padding-64 w3-center">
-      <h2>Resume</h2>
-      <p><a href="Max_Erenberg_Resume.pdf">Click here to view</a></p>
-      <br>
-      <p>A brief overview of my skills</p>
-      <div class="w3-container w3-responsive">
-        <table class="w3-table">
-          <tr>
-            <th>Skill</th>
-            <th>Profiency (relative)</th>
-            <th>Libraries/Frameworks Used</th>
-          </tr>
-          <tr class="w3-white">
-            <td>Python</td>
-            <td><div class="bar-blue" style="width:200px"></div></td>
-            <td>pandas, numpy, matplotlib, selenium</td>
-          </tr>
-          <tr class="w3-white">
-            <td>C/C++</td>
-            <td><div class="bar-blue" style="width:150px"></td>
-            <td></td>
-          </tr>
-          <tr class="w3-white">
-            <td>SQL</td>
-            <td><div class="bar-blue" style="width:140px"></td>
-            <td>SQL Server, DB2, MySQL, Postgres</td>
-          </tr>
-          <tr class="w3-white">
-            <td>Node</td>
-            <td><div class="bar-blue" style="width:130px"></td>
-            <td>Express.js, WebSockets</td>
-          </tr>
-          <tr class="w3-white">
-            <td>PHP</td>
-            <td><div class="bar-blue" style="width:100px"></td>
-            <td></td>
-          </tr>
-          <tr class="w3-white">
-            <td>C#/.NET Core</td>
-            <td><div class="bar-blue" style="width:120px"></td>
-            <td></td>
-          </tr>
-          <tr class="w3-white">
-            <td>AWS</td>
-            <td><div class="bar-blue" style="width:150px"></td>
-            <td>Lambda, Kinesis, ECS, EC2, DynamoDB</td>
-          </tr>
-          <tr class="w3-white">
-            <td>Linux containers</td>
-            <td><div class="bar-blue" style="width:140px"></td>
-            <td>Docker, Kubernetes</td>
-          </tr>
-        </table>
-      </div>
-    </div>
-  </div>
-</div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2020 Max Erenberg</p>
+    <p>Image credits: <a href="https://undraw.co">https://undraw.co</a></p>
+  </footer>
 
-<!-- Third Grid: Swing By & Contact -->
-<div class="w3-row" id="contact">
-  <div class="w3-half w3-dark-grey w3-container w3-center" style="height:700px">
-    <div class="w3-padding-64">
-      <h1>Contact</h1>
-    </div>
-    <div class="w3-padding-64">
-      <p>Email: <a href="mailto:merenber@uwaterloo.ca">merenber@uwaterloo.ca</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/max-erenberg">linkedin.com/in/max-erenberg</a></p>
-      <p>GitHub: <a href="https://github.com/maxerenberg">github.com/maxerenberg</a></p>
-    </div>
-  </div>
-  <div class="w3-half w3-teal w3-container" style="height:700px">
-    <div class="w3-padding-64 w3-padding-large">
-      <!-- TODO: fill this with something -->
-    </div>
-  </div>
-</div>
+  <script>
+    function openNav() {
+      document.getElementById("menu-list").style.width = "250px";
+    }
 
-<!-- Footer -->
-<footer class="w3-container w3-black w3-padding-16">
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-</footer>
+    function closeNav() {
+      document.getElementById("menu-list").style.width = "0";
+    }
 
+    function sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    function typewriterInit() {
+      let elements = document.getElementsByClassName("typewriter");
+      for (let elem of elements) {
+        let textArray = JSON.parse(elem.getAttribute("data-typewriter"));
+        async function writeText() {
+          let i = 0, j = 0, forward = true;
+          while (true) {
+            let text = textArray[i];
+            elem.innerHTML = text.substring(0, j);
+            await sleep(100 - Math.random() * 50);
+            if (forward) {
+              if (j === text.length) {
+                forward = false;
+                j--;
+                await sleep(1000);
+              } else {
+                j++;
+              }
+            } else {
+              if (j === 0) {
+                i = (i + 1) % textArray.length;
+                forward = true;
+                j++;
+              } else {
+                j--;
+              }
+            }
+          }
+        }
+        writeText();
+      }
+    }
+
+    window.onload = function () {
+      typewriterInit();
+    };
+  </script>
 </body>
+
 </html>
