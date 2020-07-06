@@ -2,15 +2,20 @@
   text-align: center;
 }
 
+a {
+  color: inherit;
+}
+
 .FullPageSection {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 
-.ContactSection,
-.IntroSection {
+.App > section:nth-child(odd) {
   background-color: #282c34;
   color: white;
 }
@@ -54,70 +59,90 @@
 .SectionHeader {
   font-size: 2em;
   font-weight: bold;
-  margin: 1.5em;
-}
-
-.SkillsSection > header {
-  color: #555555;
-}
-
-#BasicSkillsRow {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  width: 100%;
-}
-
-.BasicSkillsCard {
-  max-width: 13em;
   margin: 1em;
 }
 
-.BasicSkillsHeaderContainer {
-  height: 2em;
-  padding: 1em;
+.ProjectsSection .Card {
+  width: 20em;
+  height: 20em;
+  margin: 1em 2em
 }
 
-.BasicSkillsHeaderContainer > header {
-  font-size: 1.2em;
+.ProjectsSection .CardImageContainer {
+  margin: 5px;
+  height: 12em;
+  overflow: hidden;
+  position: relative;
+}
+
+.ProjectsSection .CardImage {
+  transition: transform .5s, opacity .5s;
+}
+
+.ProjectsSection .CardImageContainer:hover .CardImage {
+  transform: scale(1.5);
+  opacity: 0.4;
+}
+
+.ProjectsSection .CardImageDesc {
+  opacity: 0;
+  transition: opacity .5s;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   font-weight: bold;
-  color: dimgray;
+}
+
+.ProjectsSection .CardImageContainer:hover .CardImageDesc {
+  opacity: 1;
+}
+
+.ProjectsSection .CardHeaderContainer {
+  height: 20%;
 }
 
 .BasicSkillsDesc {
-  color: #666666;
+  color: #cccccc;
 }
 
-.BasicSkillsCard > div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.SkillsSection > header {
+  color: #dddddd;
 }
 
-.BasicSkillsImageContainer {
+.SkillsSection .Card {
+  width: 13em;
+  height: 16em;
+}
+
+.SkillsSection .CardImageContainer {
   margin: 5px;
   height: 6em;
 }
 
-.BasicSkillsImage {
-  max-width: 100%;
-  max-height: 100%;
+.SkillsChartContainer {
+  width: 100%;
 }
 
 .SkillsChart {
-  margin: 1em;
+  margin: 2em;
   display: grid;
-  grid-template-columns: auto 50vw;
+  grid-template-columns: repeat(auto-fill, minmax(min(25em, 60vw), 1fr));
   gap: 1em;
+}
+
+.SkillsChartCell {
+  display: flex;
 }
 
 .SkillsChartName {
   padding: 5px 10px;
+  flex: 0 10em;
 }
 
 .SkillsChartBarContainer {
   background-color: #cccccc;
+  flex-grow: 1;
 }
 
 .SkillsChartBar {
@@ -126,21 +151,23 @@
 }
 
 .ContactSection {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.ContactSection > header {
+  margin-top: 0;
 }
 
 .ContactInfoContainer {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   display: grid;
   grid-template-columns: repeat(2, auto);
   gap: 1em;
   font-size: 1.5em;
-}
-
-.ContactInfoContainer a {
-  color: white;
 }
 
 .ContactType {
