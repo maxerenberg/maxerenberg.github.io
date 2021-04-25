@@ -38,22 +38,41 @@ a {
 }
 
 #IntroLinksContainer {
+  padding: 0;
   margin-top: 3em;
-}
-
-#IntroLinksContainer > a {
-  text-decoration: none;
-  color: white;
-  border: 1px solid white;
-  display: inline-block;
-  padding: 10px 20px;
-  margin: 0 30px;
-  font-size: 1.5em;
+  display: flex;
+  align-items: center;
 }
 
 #IntroLinksContainer > a:hover {
   background-color: white;
   color: #282c34;
+}
+
+.SocialMediaLinkItem {
+  height: 4em;
+  width: 4em;
+  display: inline-block;
+  margin: 0 1em;
+}
+
+.SocialMediaLinkItem a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.SocialMediaLinkItem img {
+  max-height: 100%;
+  max-width: 100%;
+  opacity: 0.7;
+}
+
+.SocialMediaLinkItem a:hover img {
+  opacity: 1.0;
 }
 
 .SectionHeader {
@@ -62,114 +81,19 @@ a {
   margin: 1em;
 }
 
-.ProjectsSection .Card {
-  width: 20em;
-  height: 20em;
-  margin: 1em 2em
+.BlurbSection {
+  max-width: 40em;
+  margin: auto;
+  align-items: normal;
 }
 
-.ProjectsSection .CardImageContainer {
-  margin: 5px;
-  height: 12em;
-  overflow: hidden;
-  position: relative;
-}
-
-.ProjectsSection .CardImage {
-  transition: transform .5s, opacity .5s;
-}
-
-.ProjectsSection .CardImageContainer:hover .CardImage {
-  transform: scale(1.5);
-  opacity: 0.4;
-}
-
-.ProjectsSection .CardImageDesc {
-  opacity: 0;
-  transition: opacity .5s;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-weight: bold;
-}
-
-.ProjectsSection .CardImageContainer:hover .CardImageDesc {
-  opacity: 1;
-}
-
-.ProjectsSection .CardHeaderContainer {
-  height: 20%;
-}
-
-.BasicSkillsDesc {
-  color: #cccccc;
-}
-
-.SkillsSection > header {
-  color: #dddddd;
-}
-
-.SkillsSection .Card {
-  width: 13em;
-  height: 16em;
-}
-
-.SkillsSection .CardImageContainer {
-  margin: 5px;
-  height: 6em;
-}
-
-.SkillsChartContainer {
-  width: 100%;
-}
-
-.SkillsChart {
-  margin: 2em;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(25em, 60vw), 1fr));
-  gap: 1em;
-}
-
-.SkillsChartCell {
-  display: flex;
-}
-
-.SkillsChartName {
-  padding: 5px 10px;
-  flex: 0 10em;
-}
-
-.SkillsChartBarContainer {
-  background-color: #cccccc;
-  flex-grow: 1;
-}
-
-.SkillsChartBar {
-  background-color: steelblue;
-  height: 100%;
-}
-
-.ContactSection {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-top: 2em;
-  padding-bottom: 2em;
-}
-
-.ContactSection > header {
-  margin-top: 0;
-}
-
-.ContactInfoContainer {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  gap: 1em;
+.BlurbSection p {
+  text-align: left;
   font-size: 1.5em;
 }
 
-.ContactType {
-  text-align: right;
+.CopyrightSection {
+  padding: 1em;
+  background-color: black;
+  color: white;
 }
