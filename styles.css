@@ -1,4 +1,14 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  /* copied from the Create-React-App starter template */
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+}
+
+main {
   text-align: center;
 }
 
@@ -15,12 +25,9 @@ a {
   padding-bottom: 2em;
 }
 
-.App > section:nth-child(odd) {
-  background-color: #282c34;
-  color: white;
-}
-
 .IntroSection {
+  background-color: #282c34;
+  color: #fff;
   justify-content: center;
 }
 
@@ -34,7 +41,7 @@ a {
 }
 
 #MyNameSpan {
-  color: lightblue;
+  color: #add8e6;
 }
 
 #IntroLinksContainer {
@@ -42,11 +49,6 @@ a {
   margin-top: 3em;
   display: flex;
   align-items: center;
-}
-
-#IntroLinksContainer > a:hover {
-  background-color: white;
-  color: #282c34;
 }
 
 .SocialMediaLinkItem {
@@ -58,7 +60,7 @@ a {
 
 .SocialMediaLinkItem a {
   text-decoration: none;
-  color: white;
+  color: #fff;
   display: flex;
   align-items: center;
   height: 100%;
@@ -68,32 +70,26 @@ a {
 .SocialMediaLinkItem img {
   max-height: 100%;
   max-width: 100%;
-  opacity: 0.7;
+  opacity: .7;
 }
 
-.SocialMediaLinkItem a:hover img {
+.SocialMediaLinkItem img:hover {
   opacity: 1.0;
 }
 
-.SectionHeader {
-  font-size: 2em;
-  font-weight: bold;
-  margin: 1em;
-}
-
 .BlurbSection {
-  max-width: 40em;
+  max-width: min(90%, 40em);
   margin: auto;
   align-items: normal;
 }
 
-.BlurbSection p {
+.BlurbSection p, #ProjectsList {
   text-align: left;
   font-size: 1.5em;
 }
 
 .CopyrightSection {
   padding: 1em;
-  background-color: black;
-  color: white;
+  background-color: #000;
+  color: #fff;
 }

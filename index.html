@@ -1,1 +1,96 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><link rel="icon" href="/favicon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="Max Erenberg's website"/><link rel="manifest" href="/manifest.json"/><title>Max Erenberg</title><link href="/static/css/main.ad131038.chunk.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div><script>!function(e){function t(t){for(var n,i,l=t[0],f=t[1],a=t[2],c=0,s=[];c<l.length;c++)i=l[c],Object.prototype.hasOwnProperty.call(o,i)&&o[i]&&s.push(o[i][0]),o[i]=0;for(n in f)Object.prototype.hasOwnProperty.call(f,n)&&(e[n]=f[n]);for(p&&p(t);s.length;)s.shift()();return u.push.apply(u,a||[]),r()}function r(){for(var e,t=0;t<u.length;t++){for(var r=u[t],n=!0,l=1;l<r.length;l++){var f=r[l];0!==o[f]&&(n=!1)}n&&(u.splice(t--,1),e=i(i.s=r[0]))}return e}var n={},o={1:0},u=[];function i(t){if(n[t])return n[t].exports;var r=n[t]={i:t,l:!1,exports:{}};return e[t].call(r.exports,r,r.exports,i),r.l=!0,r.exports}i.m=e,i.c=n,i.d=function(e,t,r){i.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},i.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.t=function(e,t){if(1&t&&(e=i(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var r=Object.create(null);if(i.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var n in e)i.d(r,n,function(t){return e[t]}.bind(null,n));return r},i.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return i.d(t,"a",t),t},i.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},i.p="/";var l=this.webpackJsonpmysite=this.webpackJsonpmysite||[],f=l.push.bind(l);l.push=t,l=l.slice();for(var a=0;a<l.length;a++)t(l[a]);var p=f;r()}([])</script><script src="/static/js/2.546e006e.chunk.js"></script><script src="/static/js/main.18544ee6.chunk.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Max Erenberg's website">
+  <title>Max Erenberg</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/styles.css">
+  <meta property="og:title" content="Max Erenberg">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://maxerenberg.github.io/favicon.ico">
+  <meta property="og:url" content="https://maxerenberg.github.io">
+  <meta property="og:description" content="Max Erenberg's website">
+  <!-- See https://schema.org/Person -->
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "University of Waterloo"
+      },
+      "email": "merenber@uwaterloo.ca",
+      "familyName": "Erenberg",
+      "givenName": "Max",
+      "jobTitle": "Software Developer"
+      "name": "Max Erenberg",
+      "url": "https://maxerenberg.github.io",
+    }
+  </script>
+</head>
+<body>
+  <main>
+    <section class="FullPageSection IntroSection">
+      <header id="MyNameHeader">
+        Hi, I'm <span id="MyNameSpan">Max Erenberg</span>
+      </header>
+      <header>I'm a software developer</header>
+      <ul id="IntroLinksContainer">
+        <li class="SocialMediaLinkItem">
+          <a href="https://github.com/maxerenberg">
+            <img src="/assets/github-logo.png">
+          </a>
+        </li>
+        <li class="SocialMediaLinkItem">
+          <a href="https://ca.linkedin.com/in/max-erenberg">
+            <img src="/assets/linkedin-logo.png">
+          </a>
+        </li>
+        <li class="SocialMediaLinkItem">
+          <a href="mailto:merenber@uwaterloo.ca">
+            <img src="/assets/mail-icon.png">
+          </a>
+        </li>
+      </ul>
+      <p style="margin-top: 4em;">
+        Click <a href="/Max_Erenberg_Resume.pdf">here</a> to view my resume
+      </p>
+    </section>
+    <section class="FullPageSection BlurbSection">
+      <p>
+        I am currently a software developer at <a href="https://amd.com">AMD</a>.
+        I mostly work on power management features in kernel-mode Windows drivers.
+        I am also a member of the Systems Committee of the <a href="https://csclub.uwaterloo.ca">Computer Science Club</a>
+        of the University of Waterloo, from which I graduated with a Bachelor's Degree in Computer Science
+        in 2022.
+      </p>
+      <p>
+        I enjoy learning about and experimenting with GNU/Linux, tiling window managers,
+        and open source software in general. I recently wrote a <a href="https://github.com/maxerenberg/xidlechain">power management tool</a>
+        for Linux devices using X11, Pulseaudio, DBus, and GLib.
+      </p>
+      <p style="margin-bottom: 0;">
+        Some other projects which I have worked on include:
+      </p>
+      <ul id="ProjectsList">
+        <li><a href="https://github.com/maxerenberg/i3-dmenu-desktop-rs">A rewrite of i3-dmenu-desktop in Rust</a></li>
+        <li><a href="https://git.csclub.uwaterloo.ca/cloud/cloudbuild">An automated cloud VM image builder in Go</a></li>
+        <li><a href="https://github.com/maxerenberg/backlight-dbus">A backlight brightness controller using DBus</a></li>
+      </ul>
+      <p>
+        If you wish to contact me, I can be reached via <a href="mailto:merenber@uwaterloo.ca">email</a>
+        or libera.chat (nick: merenber).
+      </p>
+      <p>
+        Thanks for dropping by my corner of the web!
+      </p>
+    </section>
+    <footer class="CopyrightSection">
+      Copyright (c) 2022 Max Erenberg
+    </footer>
+  </main>
+</body>
+</html>
